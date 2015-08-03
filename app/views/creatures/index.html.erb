@@ -1,6 +1,15 @@
+<center>
+<h1> bogapp </h1>
+
+
 
 <% @creatures.each do |creature| %>
-  <h2> <%= creature.name %> </h2>
-  <p> <%= creature.description %></p>
-  <%= button_to "Delete", creature, method: :delete %>
+
+  <h3> name: <%= creature.name %> </h3>
+  <p> description: <%= creature.description %></p>
+  <%= button_to "update", creature, method: :put %>
+  <%= button_to "delete", creature, method: :delete %>
+
 <% end %>
+
+</center>
